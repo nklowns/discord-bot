@@ -1,1 +1,1 @@
-worker: node nks.js
+worker: node myself.js

@@ -1,17 +1,22 @@
 const fs = require("fs");
 
 const Discord = require("discord.js");
-const MYSELF = new Discord.Client();
+const MYSELF = new Discord.Client(); //https://github.com/Pitu/Kuro
 
 MYSELF.on("ready", () => {
   console.log("MYSELF STARTED!");
   MYSELF.loadCommands();
 });
 
+MYSELF.on("disconnect", () => {
+  console.log("CLIENT: Disconnected!");
+  process.exit();
+});
+
 MYSELF.on("message", msg => {
   if (msg.author.id !== MYSELF.user.id) return;
 
-  if (!msg.content.startsWith("[MYSELF]>")) return;
+  if (!msg.content.startsWith("[NKS]>")) return;
 
   // Get all the arguments
   let tmp = msg.content.substring(6, msg.length).split("<");
@@ -52,12 +57,8 @@ MYSELF.loadCommands = function() {
   });
 };
 
-MYSELF.edit = function(msg, content, timeout = 3000) {
-  if (timeout === 0) return msg.edit(content).catch(console.error);
+MYSELF.login(`${process.env.MYSELF_TOKEN}`);
 
-  return msg.edit(content).then(() => {
-    setTimeout(() => msg.delete().catch(console.error), timeout);
-  });
-};
-
-MYSELF.login(process.env.MYSELF_TOKEN);
+process.on("unhandledRejection", err => {
+  console.log(`Uncaught Promise Error:\n${err.stack}`);
+});

@@ -1,10 +1,10 @@
 {
-  "name": "nks_bot",
-  "description": "NKS a BOT",
-  "version": "0.0.0.1",
-  "main": "nks.js",
+  "name": "myself",
+  "description": "A selfbot for every NKS",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "node nks.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "discord.js": "11.5.1",

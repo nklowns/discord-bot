@@ -1,8 +1,3 @@
-let MYSELF;
-exports.init = function(bot) {
-  MYSELF = bot;
-};
-
 exports.run = function(msg) {
   msg.channel.send("[MYSELF]<").then(message => {
     message.edit("", {

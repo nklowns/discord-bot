@@ -1,12 +1,7 @@
-let MYSELF;
-exports.init = function(bot) {
-  MYSELF = bot;
-};
-
 exports.run = function(msg, args) {
   let lenght = args[0] || 1;
   let speed = args[1] || 60;
-  let message = args[2];
+  let message = args[2] || "Lorem Ipsum Dolor Sit Amet";
 
   let channel = msg.channel;
   let spamInterval = setInterval(function() {
