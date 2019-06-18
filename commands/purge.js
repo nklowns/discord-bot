@@ -13,7 +13,9 @@ exports.run = function(msg, args) {
     msgArray.length = messagecount + 1;
 
     msgArray.map(function(m) {
-      setInterval(() => m.delete(), 500).catch(console.error);
+      setTimeout(() => {
+        m.delete();
+      }, 500);
     });
   });
 };
