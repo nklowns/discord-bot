@@ -19,11 +19,12 @@ let text_emojis = new Map([
 ]);
 
 exports.run = function(msg, args) {
-  let emoji = args[0];
+  let emoji = args.trim();
 
+  msg.delete();
   if (text_emojis.has(emoji)) {
     setTimeout(() => {
-      msg.edit(text_emojis.get(emoji));
+      msg.channel.send(text_emojis.get(emoji));
     }, 50);
   }
 };

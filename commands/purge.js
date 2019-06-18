@@ -5,10 +5,12 @@ exports.init = function(bot) {
 
 exports.run = function(msg, args) {
   let messagecount = parseInt(args, 10);
+
   msg.channel.fetchMessages({ limit: 100 }).then(messages => {
     let msgArray = messages.array();
+
     msgArray = msgArray.filter(m => m.author.id === MYSELF.user.id);
     msgArray.length = messagecount + 1;
-    msgArray.map(m => m.delete().catch(console.error));
+    msgArray.map(m => setInterval(m.delete(), 500));
   });
 };
