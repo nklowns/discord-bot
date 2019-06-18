@@ -11,10 +11,9 @@ exports.run = function(msg, args) {
 
     msgArray = msgArray.filter(m => m.author.id === MYSELF.user.id);
     msgArray.length = messagecount + 1;
-    msgArray.array.forEach(m => {
-      setInterval(m.delete(), 500);
-    });
 
-    // msgArray.map(m => m.delete().catch(console.error));
+    msgArray.map(function(m) {
+      setInterval(() => m.delete()).catch(console.error);
+    });
   });
 };
