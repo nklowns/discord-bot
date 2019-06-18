@@ -11,15 +11,12 @@ exports.run = function(msg, args) {
     `Spammer#${token} no [Canal ${channel}] a cada [${speed} Segundos] por [${lenght} Vezes]`
   );
 
-  let spamInterval = setInterval(function() {
-    if (lenght > 0) {
-      while (lenght--) {
+  if (lenght > 0) {
+    while (lenght--) {
+      setInterval(function() {
         channel.send(message);
         console.log(`Spammer#${token} Falta ${lenght}`);
-      }
-    } else {
-      clearInterval(spamInterval);
-      console.log(`Spammer#${token} Concluido!`);
+      }, speed * 1000); // Seconds to Miliseconds
     }
-  }, speed * 1000); // Seconds to Miliseconds
+  }
 };
