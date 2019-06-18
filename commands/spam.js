@@ -12,7 +12,7 @@ exports.run = function(msg, args) {
   );
 
   for (let index = 0; index < lenght; index++) {
-    setInterval(function() {
+    setTimeout(function() {
       channel.send(message);
       console.log(`Spammer#${token} Faltam ${lenght - index}`);
     }, speed * 1000); // Seconds to MilisecondsZ
