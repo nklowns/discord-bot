@@ -17,6 +17,6 @@ exports.run = function(msg, args) {
     channel.send(message);
     console.log(`Spammer#${token} Faltam ${lenght}`);
 
-    if (lenght == 1) clearInterval(spammerInterval);
+    if (lenght == 0) clearInterval(spammerInterval);
   }, speed * 1000); // Seconds to Miliseconds
 };
