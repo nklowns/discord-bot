@@ -19,7 +19,7 @@ let text_emojis = new Map([
 ]);
 
 exports.run = function(msg, args) {
-  let emoji = args.trim();
+  let emoji = args;
 
   msg.delete();
   if (text_emojis.has(emoji)) {
