@@ -25,6 +25,6 @@ exports.run = function(msg, args) {
   if (text_emojis.has(emoji)) {
     setTimeout(() => {
       msg.channel.send(text_emojis.get(emoji));
-    }, 50);
+    }, 500);
   }
 };
