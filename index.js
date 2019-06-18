@@ -19,7 +19,7 @@ MYSELF.on("message", msg => {
   if (!msg.content.startsWith("!>")) return;
 
   // Get all the arguments
-  let tmp = msg.content.substring(6, msg.length).split("<");
+  let tmp = msg.content.substring(2, msg.length).split("<");
 
   // Store the command separately
   let cmd = tmp[0];
