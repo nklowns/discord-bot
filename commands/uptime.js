@@ -1,5 +1,6 @@
 exports.run = function(msg, args) {
   msg.delete();
+
   msg.channel.send("", {
     embed: {
       title: "NKS > ROLLING",

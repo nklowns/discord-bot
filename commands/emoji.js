@@ -19,9 +19,9 @@ let text_emojis = new Map([
 ]);
 
 exports.run = function(msg, args) {
+  msg.delete();
   let emoji = args[0];
 
-  msg.delete();
   if (text_emojis.has(emoji)) {
     setTimeout(() => {
       msg.channel.send(text_emojis.get(emoji));

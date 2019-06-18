@@ -1,4 +1,5 @@
 exports.run = function(msg, args) {
+  msg.delete();
   let lenght = parseInt(args[0], 10) || 1;
   let speed = parseInt(args[1], 10) || 60;
   let message = args[2] || "Lorem Ipsum Dolor Sit Amet";
