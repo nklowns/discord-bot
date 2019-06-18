@@ -50,9 +50,9 @@ MYSELF.loadCommands = function() {
         MYSELF.modules[name].init(MYSELF);
       }
 
-      MYSELF.log(`>Module ${name} is ready!`);
+      console.log(`>Module ${name} is ready!`);
     } catch (e) {
-      MYSELF.error(`<Error in module ${name}:\n${e.stack}`);
+      console.log(`<Error in module ${name}:\n${e.stack}`);
     }
   });
 };
