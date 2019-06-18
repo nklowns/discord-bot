@@ -1,3 +1,3 @@
-exports.run = function(msg) {
+exports.run = function(msg, args) {
   msg.delete().then(() => process.exit(1));
 };
