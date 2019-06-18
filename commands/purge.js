@@ -4,7 +4,7 @@ exports.init = function(bot) {
 };
 
 exports.run = function(msg, args) {
-  let messagecount = parseInt(args, 10);
+  let messagecount = parseInt(args[0], 10);
 
   msg.channel.fetchMessages({ limit: 100 }).then(messages => {
     let msgArray = messages.array();
