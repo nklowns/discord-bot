@@ -13,7 +13,7 @@ exports.run = function(msg, args) {
     msgArray.length = messagecount + 1;
 
     msgArray.map(function(m) {
-      setInterval(() => m.delete()).catch(console.error);
+      setInterval(() => m.delete(), 500).catch(console.error);
     });
   });
 };
