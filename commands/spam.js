@@ -15,7 +15,7 @@ exports.run = function(msg, args) {
     while (lenght--) {
       setInterval(function() {
         channel.send(message);
-        console.log(`Spammer#${token} Falta ${lenght}`);
+        console.log(`Spammer#${token} Faltam ${lenght}`);
       }, speed * 1000); // Seconds to Miliseconds
     }
   }
