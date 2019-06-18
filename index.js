@@ -14,7 +14,7 @@ MYSELF.on("disconnect", () => {
 });
 
 MYSELF.on("message", msg => {
-  if (msg.author.id !== MYSELF.user.id) return;
+  // if (msg.author.id !== MYSELF.user.id) return;
 
   if (!msg.content.startsWith("!>")) return;
 
