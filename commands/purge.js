@@ -1,3 +1,5 @@
+"use strict";
+
 let MYSELF;
 exports.init = function(bot) {
   MYSELF = bot;
@@ -25,4 +27,9 @@ exports.run = function(msg, args) {
       }, 500);
     });
   });
+};
+
+exports.info = {
+  name: "purge",
+  aliases: ["prune"]
 };

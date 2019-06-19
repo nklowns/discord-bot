@@ -1,4 +1,6 @@
-let text_emojis = new Map([
+"use strict";
+
+const text_emojis = new Map([
   ["lenny", "( ͡° ͜ʖ ͡°)"],
   ["magic", "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"],
   ["yay", "( ﾟヮﾟ)"],
@@ -27,4 +29,9 @@ exports.run = function(msg, args) {
       msg.channel.send(text_emojis.get(emoji));
     }, 500);
   }
+};
+
+exports.info = {
+  name: "emoji",
+  aliases: ["e"]
 };

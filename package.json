@@ -1,13 +1,24 @@
 {
   "name": "myself",
-  "description": "A selfbot for every NKS",
   "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "description": "A selfbot for every NKS.",
+  "author": {
+    "name": "Noocktall Klown Stratght",
+    "email": "nklowns@gmail.com"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
+  "engines": {
+    "node": "10.x",
+    "npm": ">= 6.0.0"
+  },
   "dependencies": {
     "discord.js": "11.5.1",
+    "lodash": "^4.17.11",
     "request": "2.88.0"
   }
 }
