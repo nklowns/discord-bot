@@ -10,8 +10,8 @@ exports.run = function(msg, args) {
   let messagecount = parseInt(args[0], 10);
 
   console.log(
-    `Purger#${token} no [Canal ${
-      msg.channel
+    `Purger#${token} no [Servidor ${msg.guild.name}] [Canal #${
+      msg.channel.name
     }] removendo [${messagecount} Mensagens]`
   );
 
